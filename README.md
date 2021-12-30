@@ -1,2 +1,2 @@
 # Video-Rental-node
-Using html &amp; css version to create connection with database and server validation
+Using html &amp; css version, create connection with database and server validation
