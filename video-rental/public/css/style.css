@@ -86,7 +86,7 @@ nav a {
   color: #000;
 }
 
-nav a.current {
+nav a.active {
   background-color: rgba(189, 134, 67, 0.993);
   border-radius: 30px;
   max-height: 50px;

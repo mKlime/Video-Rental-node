@@ -1,0 +1,44 @@
+<%- include('../../fragments/header.ejs')%>
+
+    <div class="info container-fluid d-none">
+        <div class="alert alert-warning alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Dane wypożyczenia zostały zmienione.
+        </div>
+    </div>
+
+    <main>
+        <h2>Szczegóły wypożyczenia</h2>
+        <form class="form">
+            
+            <label for="user">Użytkownik: *</label>
+            <input type="text" name="user" value="Jan Kowalski" id="user" disabled />
+        
+            <label for="movieName">Nazwa filmu: *</label>
+            <input type="text" name="movieName" value="Noc w Muzeum" id="movieName" disabled/>
+        
+            <label for="Date">Rok premiery: *</label>
+            <input  type="number"  name="Date" value="2006"  id="Date" disabled/>
+        
+            <label for="RentDate">Data wypożyczenia: *</label>
+            <input type="date" name="RentDate"  id="RentDate" disabled/>
+        
+            <label for="ReturnDate">Data zwrotu:</label>
+            <input type="date" name="ReturnDate"  id="ReturnDate" disabled/>
+        
+        </form>
+            
+            <p><a href="#" class="btn-edit"style="margin:1.5rem 4rem;">Edytuj</a>
+            <a href="/rent"class="btn-details ">Powrót</a></p>
+       
+    </main>
+    
+    
+ <script>
+        $(document).ready(function(){
+            $('.btn-edit').click(function(){
+                $('.info').removeClass('d-none').show()
+            }) 
+        });
+</script>
+<%- include('../../fragments/footer.ejs')%>

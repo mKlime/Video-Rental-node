@@ -44,7 +44,7 @@ nav{
         text-decoration: none;
         color: $textColor;
     }
-    a.current{
+    a.active{
         background-color: $activeTabBackgroundColor; 
         border-radius: 30px;
         max-height: 50px;

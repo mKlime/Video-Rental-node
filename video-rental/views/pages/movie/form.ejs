@@ -1,0 +1,40 @@
+<%- include('../../fragments/header.ejs')%>
+
+    <div id="info" class="container-fluid d-none">
+        <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Film został dodany.
+        </div>
+    </div>
+    <main>
+        <h2>Nowy film</h2>
+        <form class="form" novalidate onsubmit="return validateForm();">
+            
+              
+            <label for="movieName">Nazwa filmu: *</label>
+            <input type="text" name="movieName"  id="movieName" placeholder="2-60 znaków" required/>
+            <span id="errorMovieName" class="error-text"></span>
+            
+            <label for="Date">Rok premiery: *</label>
+            <input  type="number"  name="premiere"   id="premiere" placeholder=" od 1888 do 2021" required/>
+            <span id="errorPremiere" class="error-text"></span>
+            
+            <label for="Type">Gatunek: *</label>
+            <input  type="text"  name="type"  id="type" placeholder="2-30 znaków" required  />
+            <span id="errorType" class="error-text"></span>
+
+            <label for="Price">Cena/tydzień: *</label>
+            <input  type="number"  name="price"   id="price" placeholder="Cena w przedziale 1.00 - 49.99" required />
+            <span id="errorPrice" class="error-text"></span>  
+            
+           
+    
+            <div class="f-buttons">
+                <p id="errorsSummary" class="error-text"></p>
+                <button id="subbut" type="submit" class="btn btn-success subbut" style="margin-right: 4rem;">Dodaj</button>
+                <a href="/movie" class="btn btn-danger button-cancel">Anuluj</a>
+            </div>
+        </form>
+    </main>
+    
+<%- include('../../fragments/footer.ejs')%>

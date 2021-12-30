@@ -1,0 +1,49 @@
+
+<%- include('../../fragments/header.ejs')%>
+
+    <div id="info" class="container-fluid d-none">
+        <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Wypożyczenie zostało dodane.
+        </div>
+    </div>
+    <main>
+        <h2>Nowe wypożyczenie</h2>
+        <form class="form" novalidate onsubmit="return validateForm();">
+
+            <label for="user">Użytkownik: *</label>
+                <select id="user_id" name="user_id" required>
+                    <option value=""> Wybierz użytkownika </option>
+                    <option value="userid">Jan Kowalski</option>
+                </select>
+            <span id="errorUser" class="error-text"></span>
+
+            <label for="movieName">Nazwa filmu: *</label>
+                <select id="movi_id" name="movi_id" required>
+                    <option value=""> Wybierz film </option>
+                    <option value="movieid">Potop</option>
+                </select>   
+            <span id="errorMovieName" class="error-text"></span>
+
+            <label for="Date">Rok premiery: *</label>
+            <input  type="number"  name="premiere"   id="premiere" min="1888" placeholder=" od 1888 do 2021" required/>
+            <span id="errorPremiere" class="error-text"></span>
+
+            <label for="RentDate">Data wypożyczenia: *</label>
+            <input type="date" name="dateFrom"  id="dateFrom" required />
+            <span id="errorDateFrom" class="error-text"></span>
+            
+            <label for="ReturnDate">Data zwrotu:</label>
+            <input type="date" name="dateTo"  id="dateTo" />
+            <span id="errorDateTo" class="error-text"></span>
+    
+                <div class="f-buttons">
+                    <p id="errorsSummary" class="error-text"></p>
+                    <a href="#"><button type="submit" class="btn btn-success subbut"style="margin-right: 4rem;" >Dodaj</button></a>
+                    <a href="/rent" class="btn btn-danger button-cancel">Anuluj</a>
+                </div>
+        </form>
+    </main>
+    
+
+<%- include('../../fragments/footer.ejs')%>

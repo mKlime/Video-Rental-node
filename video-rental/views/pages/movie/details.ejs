@@ -1,0 +1,66 @@
+<%- include('../../fragments/header.ejs')%>
+
+    <div class="info container-fluid d-none">
+        <div class="alert alert-warning alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Dane filmu zostały zmienione.
+        </div>
+    </div>
+
+    <main>
+        <h2>Szczegóły Filmu</h2>
+        
+        <form class="form">
+        
+            <label for="movieName">Nazwa filmu: *</label>
+            <input type="text" name="movieName" value="Noc w Muzeum" id="movieName" disabled/>
+        
+            <label for="Date">Rok premiery: *</label>
+             <input  type="number"  name="Date" value="2006"  id="Date" disabled/>
+        
+            <label for="Type">Gatunek: *</label>
+            <input  type="text"  name="Type" value="fantastyka" id="Type" disabled />
+        
+            <label for="Price">Cena/tydzień: *</label>
+            <input  type="number"  name="Price" value="10"  id="Price" disabled/>
+         
+        </form>
+
+        
+        <p><a href="#" class="btn-edit mt-3">Edytuj</a></p>
+        
+        <h2>Szczegóły wypożyczenia</h2>
+        <table class="list">
+            <thead>
+                <tr>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Data wypożyczenia</th>
+                    <th>Data zwrotu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jan</td>
+                    <td>Kowalski</td>
+                    <td>2020-11-03</td>
+                    <td>2020-11-09</td>
+                </tr>
+                <tr>
+                    <td>Anna</td>
+                    <td>Nowak</td>
+                    <td>2020-11-13</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a href="/movie"class="btn-details m-left">Powrót</a></p>
+    </main>
+    <script>
+        $(document).ready(function(){
+            $('.btn-edit').click(function(){
+                $('.info').removeClass('d-none').show()
+            }) 
+        });
+    </script>
+<%- include('../../fragments/footer.ejs')%>
