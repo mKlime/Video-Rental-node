@@ -1,0 +1,15 @@
+@import 'variables';
+.form{
+    input.error-input,
+    select.error-input{
+        border: 3px solid $errorColor;
+        
+    }
+}
+.error-text{
+    display: block;
+    font-size: .85em;
+    line-height: 1rem;
+    margin-left: 10px;
+    color: $errorColor;
+}

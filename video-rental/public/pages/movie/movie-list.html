@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Movie World Demo</title>
+<body>
+    <header>
+        <h1>Movie World Enterprise</h1>
+        <a href="../../index.html">
+            <img class="logo" src="../../images/logo.png" alt="Movie World Enterprise Logo">
+        </a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Strona główna</a></li>
+            <li><a href="../user/user-list.html">Użytkownicy</a></li>
+            <li><a href="" class="current">Filmy</a></li>
+            <li><a href="../rent/rent-list.html" >Wypożyczenia</a></li>
+        </ul>
+    </nav>
+    
+    <div class="info container-fluid d-none">
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Film został usunięty.
+        </div>
+    </div>
+    
+    <main>
+        <h2>Lista filmów</h2>
+        <table class="list">
+            <thead>
+                <tr>
+                    <th>Nazwa filmu</th>
+                    <th>Rok premiery</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jumanji</td>
+                    <td>1995</td>
+                    <td>
+                        <ul class="action-list">
+                            <li><a href="movie-details.html" class="btn-details details">Szczegóły</a></li>
+                            <li><a href="" class="btn-edit edit">Edytuj</a></li>
+                            <li><a href="#" class="btn-delete delete" data-toggle="modal" data-target="#exampleModalCenter">Usuń</a></li>
+                        </ul>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>Sposób na teściową</td>
+                    <td>2005</td>
+                    <td>
+                        <ul class="action-list">
+                            <li><a href="movie-details.html"  class="btn-details details">Szczegóły</a></li>
+                            <li><a href="" class="btn-edit edit">Edytuj</a></li>
+                            <li><a href="#" class="btn-delete delete" data-toggle="modal" data-target="#exampleModalCenter">Usuń</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a href="movie-form.html" class="button-add">Dodaj nowy film</a></p>
+
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Usunięcie filmu</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Czy chcesz usunąć ten film?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Tak</button>
+                  <button type="button" class="btn btn-light" data-dismiss="modal">Nie</button>
+                </div>
+              </div>
+            </div>
+        </div>   
+            
+    </main>
+    
+
+    <footer>
+       
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.btn-danger').click(function(){
+                $('.info').removeClass('d-none').show()
+            }) 
+        });
+    </script>
+</body>
+</html>

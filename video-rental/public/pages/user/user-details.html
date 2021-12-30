@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Movie World Demo</title>
+</head>
+<body>
+    <header>
+        <h1>Movie World Enterprise</h1>
+        <a href="../../index.html">
+            <img class="logo" src="../../images/logo.png" alt="Movie World Enterprise Logo">
+        </a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Strona główna</a></li>
+            <li><a href="user-list.html"  class="current">Użytkownicy</a></li>
+            <li><a href="../movie/movie-list.html">Filmy</a></li>
+            <li><a href="../rent/rent-list.html">Wypożyczenia</a></li>
+        </ul>
+    </nav>
+    
+    <div class="info container-fluid d-none">
+        <div class="alert alert-warning alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Dane użytkownika zostały zmienione.
+        </div>
+    </div>
+
+    <main>
+        <h2>Szczegóły użytkownika</h2>
+
+        <form class="form">
+            
+            <label for="firstName">Imię:</label>
+            <input type="text" name="firstName" value="Jan" id="firstName" disabled />
+        
+            <label for="lastName">Nazwisko:</label>
+            <input type="text" name="lastName" value="Kowalski" id="lastName" disabled />
+
+            <label for="Number">Numer telefonu:</label>
+            <input type="tel" name="Number" value="510 111 555" id="number" disabled />
+        
+            <label for="E-mail">E-mail:</label>
+            <input type="email" name="E-mail" value="jan.kowalski@acme.com" id="e-mail" disabled />
+
+            <label for="Password">Hasło:</label>
+            <input type="password" name="Password" value="**********" id="password" disabled />
+        
+        </form>
+        
+        <p><a href="#" class="btn-edit mt-3">Edytuj</a></p>
+        
+        <h2>Szczegóły wypożyczenia</h2>
+        <table class="list">
+            <thead>
+                <tr>
+                    <th>Nazwa filmu</th>
+                    <th>Rok premiery</th>
+                    <th>Data wypożyczenia</th>
+                    <th>Data zwrotu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jumanji</td>
+                    <td>1995</td>
+                    <td>2020-11-03</td>
+                    <td>2020-11-09</td>
+                </tr>
+                <tr>
+                    <td>Noc w Muzeum</td>
+                    <td>2006</td>
+                    <td>2020-11-20</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a href="user-list.html"class="btn-details">Powrót</a></p>
+    </main>
+    
+    <footer>
+       
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.btn-edit').click(function(){
+                $('.info').removeClass('d-none').show()
+            }) 
+        });
+    </script>
+</body>
+</html>

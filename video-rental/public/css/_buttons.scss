@@ -1,0 +1,61 @@
+@import 'variables';
+
+
+.btn-details, .btn-edit, .btn-delete{
+    display: inline-block;
+    width: 80px;
+    padding: 0.25rem 0.5rem;
+}
+.btn-details, .btn-edit, .btn-delete, .button-add, .button-cancel,.subbut {
+    border-radius: 5px;
+    color: $buttonTextColor;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8rem;
+    
+}
+.button-add{
+    font-weight: bold;
+    background-color: $buttonAddColor;
+}
+.button-add,
+.button-cancel,
+.subbut{
+    padding: 0.5rem 2rem;
+}
+.f-buttons{
+    grid-column: 1/4 ;
+    grid-column-end: -1;
+    p{
+        margin-bottom: 20px;
+    }
+    
+}
+
+.button-add:hover{
+    background-color: $buttonAddHover;
+    color: $buttonTextHover;
+}
+.btn-delete, .button-cancel{
+    background-color: $cancelButtonColor;
+}
+.btn-delete:hover,
+.button-cancel:hover{
+    background-color: $cancelButtonHover;
+    color: $buttonTextHover;
+}
+.btn-edit:hover{
+    background-color: $editButtonHover;
+    color: $buttonTextHover;
+}
+.btn-edit{
+    background-color: $editButtonColor;
+    
+}
+.btn-details:hover{
+    background-color: $detailsButtonHover;
+    color: $buttonTextHover;
+}
+.btn-details{
+    background-color: $detailsButtonColor;
+}

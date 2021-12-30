@@ -1,0 +1,113 @@
+@import 'variables';
+
+  @media all and(max-width: 776px){
+    header {
+        flex-direction: column;
+        height: 140px;
+        h1{
+            left: 0;
+            text-align: center;
+            
+        }
+        .logo{
+            
+            display: none;
+        }
+    }
+    .form{
+        grid-template-columns: 1fr;
+        row-gap: unset;
+        margin-left: unset;
+    }
+    .f-buttons{
+        grid-column: 1/1;
+    }
+    .hide{
+        display: none;
+    }
+    ul{
+      flex-wrap: wrap;
+      li{
+        flex-basis: 50%;
+        text-align: center;
+      }
+      a{
+        display: block;
+      }
+    }
+   .details{
+      color: transparent;
+      width: 32px;
+      height: 32px;
+      background-image: url(../images/details.png);
+      margin: 5px;
+   }
+   .details:hover{
+     color: transparent;
+   }
+   .delete{
+    color: transparent;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/delete.png);
+    margin: 5px;
+    }
+    .delete:hover{
+      color: transparent;
+    }
+    .edit{
+      color: transparent;
+      width: 32px;
+      height: 32px;
+      background-image: url(../images/edit.png);
+      margin: 5px;
+    }
+    .edit:hover{
+    color: transparent;
+    }
+
+    
+  }
+  
+@media all and (max-width: 540px) {
+    body,
+    nav,
+    nav ul,
+    header,
+    main,
+    footer{
+        margin: 0;
+    }
+    header{
+        border-radius: 0;
+    }
+    nav{
+      border-radius: 0;
+    }
+    ul li{
+      flex-basis: 100%;
+      text-align: center;
+      
+    }
+    .error-text{
+      margin-bottom: 1rem;
+    }
+    .delete{
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/delete-sm.png);
+      margin: 0;
+    }
+    .edit{
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/edit-sm.png);
+      margin: 0;
+    }
+    .details{
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/details-sm.png);
+      margin: 0;
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/validationCommon.js"></script>
+    <script src="../../js/validationRentForm.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Movie World Demo</title>
+</head>
+<body>
+    <header>
+        <h1>Movie World Enterprise</h1>
+        <a href="../../index.html">
+            <img class="logo" src="../../images/logo.png" alt="Movie World Enterprise Logo">
+        </a>
+        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Strona główna</a></li>
+            <li><a href="../user/user-list.html">Użytkownicy</a></li>
+            <li><a href="../movie/movie-list.html">Filmy</a></li>
+            <li><a href="rent-list.html"class="current">Wypożyczenia</a></li>
+        </ul>
+    </nav>
+    <div id="info" class="container-fluid d-none">
+        <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Wypożyczenie zostało dodane.
+        </div>
+    </div>
+    <main>
+        <h2>Nowe wypożyczenie</h2>
+        <form class="form" novalidate onsubmit="return validateForm();">
+
+            <label for="user">Użytkownik: *</label>
+                <select id="user_id" name="user_id" required>
+                    <option value=""> Wybierz użytkownika </option>
+                    <option value="userid">Jan Kowalski</option>
+                </select>
+            <span id="errorUser" class="error-text"></span>
+
+            <label for="movieName">Nazwa filmu: *</label>
+                <select id="movi_id" name="movi_id" required>
+                    <option value=""> Wybierz film </option>
+                    <option value="movieid">Potop</option>
+                </select>   
+            <span id="errorMovieName" class="error-text"></span>
+
+            <label for="Date">Rok premiery: *</label>
+            <input  type="number"  name="premiere"   id="premiere" min="1888" placeholder=" od 1888 do 2021" required/>
+            <span id="errorPremiere" class="error-text"></span>
+
+            <label for="RentDate">Data wypożyczenia: *</label>
+            <input type="date" name="dateFrom"  id="dateFrom" required />
+            <span id="errorDateFrom" class="error-text"></span>
+            
+            <label for="ReturnDate">Data zwrotu:</label>
+            <input type="date" name="dateTo"  id="dateTo" />
+            <span id="errorDateTo" class="error-text"></span>
+    
+                <div class="f-buttons">
+                    <p id="errorsSummary" class="error-text"></p>
+                    <a href="#"><button type="submit" class="btn btn-success subbut"style="margin-right: 4rem;" >Dodaj</button></a>
+                    <a href="rent-list.html" class="btn btn-danger button-cancel">Anuluj</a>
+                </div>
+        </form>
+    </main>
+    
+
+    <footer>
+        
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+</body>
+</html>

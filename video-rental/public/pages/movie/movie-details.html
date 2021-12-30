@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Movie World Demo</title>
+</head>
+<body>
+    <header>
+        <h1>Movie World Enterprise</h1>
+        <a href="../../index.html">
+            <img class="logo" src="../../images/logo.png" alt="Movie World Enterprise Logo">
+        </a>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Strona główna</a></li>
+            <li><a href="../user/user-list.html">Użytkownicy</a></li>
+            <li><a href="movie-list.html" class="current">Filmy</a></li>
+            <li><a href="../rent/rent-list.html" >Wypożyczenia</a></li>
+        </ul>
+    </nav>
+    <div class="info container-fluid d-none">
+        <div class="alert alert-warning alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            Dane filmu zostały zmienione.
+        </div>
+    </div>
+
+    <main>
+        <h2>Szczegóły Filmu</h2>
+        
+        <form class="form">
+        
+            <label for="movieName">Nazwa filmu: *</label>
+            <input type="text" name="movieName" value="Noc w Muzeum" id="movieName" disabled/>
+        
+            <label for="Date">Rok premiery: *</label>
+             <input  type="number"  name="Date" value="2006"  id="Date" disabled/>
+        
+            <label for="Type">Gatunek: *</label>
+            <input  type="text"  name="Type" value="fantastyka" id="Type" disabled />
+        
+            <label for="Price">Cena/tydzień: *</label>
+            <input  type="number"  name="Price" value="10"  id="Price" disabled/>
+         
+        </form>
+
+        
+        <p><a href="#" class="btn-edit mt-3">Edytuj</a></p>
+        
+        <h2>Szczegóły wypożyczenia</h2>
+        <table class="list">
+            <thead>
+                <tr>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Data wypożyczenia</th>
+                    <th>Data zwrotu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jan</td>
+                    <td>Kowalski</td>
+                    <td>2020-11-03</td>
+                    <td>2020-11-09</td>
+                </tr>
+                <tr>
+                    <td>Anna</td>
+                    <td>Nowak</td>
+                    <td>2020-11-13</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a href="../movie/movie-list.html"class="btn-details m-left">Powrót</a></p>
+    </main>
+    
+    <footer>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.btn-edit').click(function(){
+                $('.info').removeClass('d-none').show()
+            }) 
+        });
+    </script>
+</body>
+</html>

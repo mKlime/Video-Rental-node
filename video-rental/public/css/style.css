@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* ul {
+  overflow: hidden;
+  list-style-type: none;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: unset;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.h1, h1 {
+  font-size: 2rem;
+}
+
+.h2, h2 {
+  font-size: 1.5rem;
+}
+
+.f-buttons {
+  margin-top: 2rem;
+}
+
+.m-left {
+  margin-left: 2re;
+}
+
+body {
+  background-color: #c5c5bf;
+  font-family: 'Lato', sans-serif;
+  min-width: 360px;
+  line-height: normal;
+}
+
+header {
+  background-color: #1b1a1a;
+  margin: 1rem 1rem 0 1rem;
+  color: wheat;
+  font-weight: bold;
+  border-radius: 10px;
+  position: relative;
+}
+
+header h1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  margin-bottom: 0;
+}
+
+header .logo {
+  height: 150px;
+}
+
+nav {
+  background-color: rgba(158, 132, 99, 0.719);
+  border-radius: 10px;
+  margin: 5px 1rem;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav a {
+  display: inline-block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+nav a.current {
+  background-color: rgba(189, 134, 67, 0.993);
+  border-radius: 30px;
+  max-height: 50px;
+}
+
+nav a:hover {
+  background-color: rgba(175, 104, 16, 0.486);
+  color: #3e4547;
+  border-radius: 30px;
+  max-height: 50px;
+}
+
+footer {
+  background-color: #1b1a1a;
+  margin: 1rem;
+  padding: 1rem;
+  color: wheat;
+  font-weight: 700;
+  overflow: auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+main {
+  margin: 1rem;
+  padding: 1.5rem;
+}
+
+main h2 {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #000;
+}
+
+main p {
+  margin-bottom: 10px;
+}
+
+main .newMovies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .newMovies img {
+  margin-top: 20px;
+}
+
+.list {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.list th, .list td {
+  border: 1px solid #000;
+  text-align: center;
+  padding: 0.4rem;
+}
+
+.list th {
+  background-color: #e8ecdc;
+}
+
+.action-list {
+  text-align: center;
+}
+
+.action-list li {
+  display: inline-block;
+  margin: 3px;
+}
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 300px 1fr;
+      grid-template-columns: 200px 300px 1fr;
+  row-gap: 1rem;
+}
+
+.form select,
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="date"],
+.form input[type="email"],
+.form input[type="tel"],
+.form input[type="password"] {
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.5em;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.btn-details, .btn-edit, .btn-delete {
+  display: inline-block;
+  width: 80px;
+  padding: 0.25rem 0.5rem;
+}
+
+.btn-details, .btn-edit, .btn-delete, .button-add, .button-cancel, .subbut {
+  border-radius: 5px;
+  color: #0a0909;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.button-add {
+  font-weight: bold;
+  background-color: green;
+}
+
+.button-add,
+.button-cancel,
+.subbut {
+  padding: 0.5rem 2rem;
+}
+
+.f-buttons {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  grid-column-end: -1;
+}
+
+.f-buttons p {
+  margin-bottom: 20px;
+}
+
+.button-add:hover {
+  background-color: #17b617;
+  color: white;
+}
+
+.btn-delete, .button-cancel {
+  background-color: #cf2e1c;
+}
+
+.btn-delete:hover,
+.button-cancel:hover {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #ffd54f;
+  color: white;
+}
+
+.btn-edit {
+  background-color: #f1c40f;
+}
+
+.btn-details:hover {
+  background-color: #90caf9;
+  color: white;
+}
+
+.btn-details {
+  background-color: #3498db;
+}
+
+.form input.error-input,
+.form select.error-input {
+  border: 3px solid #e74c3c;
+}
+
+.error-text {
+  display: block;
+  font-size: .85em;
+  line-height: 1rem;
+  margin-left: 10px;
+  color: #e74c3c;
+}
+
+@media all and (max-width: 776px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 140px;
+  }
+  header h1 {
+    left: 0;
+    text-align: center;
+  }
+  header .logo {
+    display: none;
+  }
+  .form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: unset;
+    margin-left: unset;
+  }
+  .f-buttons {
+    -ms-grid-column: 1;
+    grid-column: 1/1;
+  }
+  .hide {
+    display: none;
+  }
+  ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  ul li {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    text-align: center;
+  }
+  ul a {
+    display: block;
+  }
+  .details {
+    color: transparent;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/details.png);
+    margin: 5px;
+  }
+  .details:hover {
+    color: transparent;
+  }
+  .delete {
+    color: transparent;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/delete.png);
+    margin: 5px;
+  }
+  .delete:hover {
+    color: transparent;
+  }
+  .edit {
+    color: transparent;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/edit.png);
+    margin: 5px;
+  }
+  .edit:hover {
+    color: transparent;
+  }
+}
+
+@media all and (max-width: 540px) {
+  body,
+  nav,
+  nav ul,
+  header,
+  main,
+  footer {
+    margin: 0;
+  }
+  header {
+    border-radius: 0;
+  }
+  nav {
+    border-radius: 0;
+  }
+  ul li {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
+  .error-text {
+    margin-bottom: 1rem;
+  }
+  .delete {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/delete-sm.png);
+    margin: 0;
+  }
+  .edit {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/edit-sm.png);
+    margin: 0;
+  }
+  .details {
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/details-sm.png);
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
