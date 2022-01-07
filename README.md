@@ -12,7 +12,7 @@ Launch docker container
 ```
 $ docker-compose up
 ```
-Zamiast dockera możesz użyć po prostu bazy danych MySql na porcie 3306, jeżeli występują problemy sprawdź czy na pewno masz stworzony schemat bazy o nazwie video-rental-project
+Instead docker you can use MySql database on port: 3306, if there are problems, check if you have created a database schema named: video-rental-project
 
 name: root password: root It can be changed in: cd  ../Video-Rental-node/video-rental/config/sequelize.js
 
