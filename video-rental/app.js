@@ -9,6 +9,14 @@ const userRouter = require('./routes/userRoute');
 const movieRouter = require('./routes/movieRoute');
 const rentRouter = require('./routes/rentRoute');
 
+const sequelizeInit = require('./config/init');
+
+sequelizeInit()
+    .catch(err => {
+        console.log(err);
+    });
+
+
 var app = express();
 
 // view engine setup
